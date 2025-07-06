@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Search Employee</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!-- Here we getting the data from the back by using model then by using the thyme(th) do the
+			 part of displaying and ${} ->  is a place holder where we give the values -->
+			<h1>Search Employee:</h1>
+			<p><Strong>Id: </Strong><span th:text = "${Emp.id}"></span></p>  
+			<p><Strong>Name: </Strong><span th:text = "${Emp.name}"></span></p>
+			<p><Strong>Department: </Strong><span th:text = "${Emp.department}"></span></p>
+			<p><Strong>Salary: </Strong><span th:text = "${Emp.salary}"></span></p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Create new Employee</title>
+		<link rel="stylesheet" href="style.css" />
+</head>
+	<body>
+		<div class="container">
+			<h3>Fill employee info:</h3>
+			<form action ="/create" method="post">   <!-- action will get the data the html and it will give to the /create method in the create metho we were using a postMapping but the action will provide a getMapping to cahnge that we need to mention that method = "post" -->
+				<label >Employee id:</label>
+				<input type="text" name = "id" required>
+				<br>
+				<label >Employee Name:</label>
+				<input type="text" name = "name" required>
+				<br>
+				<label >Employee Department:</label>
+				<input type="text" name = "department" required>
+				<br>
+				<label >Employee Salary:</label>
+				<input type="text" name = "salary" required>
+				<br>
+				<input type="submit" value = "ADD EMPLOYEE">
+			</form>
+		</div>
+	</body>
+</html>

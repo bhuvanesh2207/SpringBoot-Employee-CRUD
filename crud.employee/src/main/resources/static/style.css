@@ -1,0 +1,159 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Container for all content */
+.container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Heading */
+h1, h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Paragraph and span styling for displaying employee data */
+p {
+  font-size: 17px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+span {
+  color: #007BFF;
+  font-weight: 500;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+  transform: scale(1.02);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+thead {
+  background-color: #007BFF;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Link list styling */
+.link-list {
+  list-style-type: disc;
+  padding-left: 25px;
+  margin-top: 20px;
+}
+
+.link-list li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.link-list a {
+  text-decoration: none;
+  color: #4a148c;
+  font-weight: 500;
+  transition: color 0.3s ease, padding-left 0.2s ease;
+}
+
+.link-list a:hover {
+  color: #6a1b9a;
+  padding-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  input[type="text"],
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}

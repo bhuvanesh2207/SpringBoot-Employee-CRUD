@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import crud.employee.entity.Employee;
 import crud.employee.service.EmployeeService;
 
-//@RestController: If a method returns a string, it will be treated as a plain string (i.e., the response body).
-//To return a view name (like a JSP or HTML page), use @Controller instead. 
-//@Controller does not treat the return value as just a string but can also resolve view names.
+//@RestController: If a method returns a String, it is treated as the response body (e.g., plain text or JSON).
+//To return a view (such as a JSP or HTML page), use @Controller instead.
+//@Controller interprets the return value as a view name, not as raw response content.
 
 @Controller
 public class EmployeeController {
@@ -67,7 +67,7 @@ public class EmployeeController {
 	
 	@GetMapping("/searchPage")
 	public String searchPage() {
-		return "search";	// return delete page
+		return "search";	// return search page
 	}
 	
 	@GetMapping("/viewAll")

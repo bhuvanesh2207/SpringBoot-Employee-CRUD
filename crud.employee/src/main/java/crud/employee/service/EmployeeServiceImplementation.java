@@ -8,37 +8,41 @@ import org.springframework.stereotype.Service;
 import crud.employee.entity.Employee;
 import crud.employee.repository.EmployeeRepository;
 
-@Service // -> tell spring it a service not a class.
+@Service // Indicates that this class is a service component in the Spring context.
 public class EmployeeServiceImplementation implements EmployeeService {
 
-	// service need to intract with db but service cant but repo can so we using
-	// repo.
-	// the repository is used to communicate with db so we creat a reference of the
-	// repo.
-	@Autowired // will connect the serive and repo
-	EmployeeRepository repo;
+    // Service classes should not directly interact with the database.
+	// Instead, they use a repository, which handles communication with the DB.
+	// Automatically injects the EmployeeRepository bean into this class.
+	@Autowired 
+    private EmployeeRepository repo;
 
-	public void createNewEmployee(Employee emp) {
-		repo.save(emp); // this single line of code will get the obj and repo will send the data to db
-						// and the table will be crt and data will be added to the table.
-	}
+    // Creates and saves a new employee record in the database.
+    // If the table doesn't exist, Spring Data JPA will create it automatically.
+    public void createNewEmployee(Employee emp) {
+        repo.save(emp); // Persists the employee object to the database.
+    }
 
-	public void updateEmployee(Employee emp) {
-		repo.save(emp);
-	}
+    // Updates an existing employee record.
+    // If the employee doesn't exist, it may create a new one depending on the ID.
+    public void updateEmployee(Employee emp) {
+        repo.save(emp); // save() works for both insert and update.
+    }
 
-	public void deleteEmployee(Employee emp) {
-		repo.delete(emp);
-	}
+    // Deletes an employee record from the database.
+    public void deleteEmployee(Employee emp) {
+        repo.delete(emp);
+    }
 
-	public Employee searchEmployee(Long id) {
-		return repo.findById(id).get();
+    // Searches for an employee by their ID.
+    // Returns the employee if found, or throws an exception if not.
+    public Employee searchEmployee(Long id) {
+        return repo.findById(id).get(); // Consider handling Optional properly in real applications.
+    }
 
-	}
-
-	@Override
-	public List<Employee> getAllEmployee() {
-		return repo.findAll();
-	}
-
+    // Retrieves all employee records from the database.
+    @Override
+    public List<Employee> getAllEmployee() {
+        return repo.findAll();
+    }
 }
