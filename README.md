@@ -60,3 +60,10 @@ mvn spring-boot:run
 The Employee Management CRUD Application is a simple yet powerful project to demonstrate how to use Spring Boot, MySQL, HTML, and CSS together.
 It covers all CRUD operations (Add, Read, Update, Delete) and provides a clean, minimal UI for managing employees.
 This project can be extended further with features like search, pagination, validation, and role-based access control.
+
+---
+## 📞 Contact  
+For any questions or suggestions, feel free to reach out:  
+
+- **Email:** bhuvaneshb546@gmail.com
+- **LinkedIn:** [Bhuvanesh KR](https://www.linkedin.com/in/bhuvanesh-kr/)  
